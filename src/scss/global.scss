@@ -1,0 +1,112 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+html {
+          box-sizing: border-box;
+
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: $regular;
+  line-height: 24px;
+  color: $black;
+  background-color: $white;
+}
+
+.closed {
+  overflow-y: hidden;
+  height: 100vh;
+  padding-right: 15px;
+}
+
+* , *::after , *::before {
+          box-sizing: inherit;
+
+  -webkit-box-sizing: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: initial;
+  outline: none;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+p , h1 , h2 , h3 , h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-family: $bold;
+  line-height: 2.85rem;
+  text-transform: uppercase;
+  letter-spacing: -.01rem;
+  color: $white;
+}
+
+h2 {
+  font-size: 2.55rem;
+  font-family: $bold;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: -.01rem;
+  color: $black;
+}
+
+h3 {
+  font-size: 1rem;
+  font-family: $bold;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  color: $black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  font-family: $regular;
+  line-height: 20px;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+button:focus , button:active , a:focus , a:active {
+  outline: 1px solid crimson;
+  outline-offset: 3px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.container {
+  width: 1375px;
+  max-width: 1375px;
+  margin: $centered;
+}
+

@@ -1,0 +1,119 @@
+@mixin flex-center-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+}
+
+@mixin flex-start-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  -webkit-box-align: start;
+  -webkit-box-pack: justify;
+  -ms-flex-align: start;
+  -ms-flex-pack: justify;
+}
+
+@mixin flex-stretch-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  -webkit-box-align: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-align: stretch;
+  -ms-flex-pack: justify;
+}
+
+// @mixin flex-center-center {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   -webkit-box-align: center;
+//   -webkit-box-pack: center;
+//   -ms-flex-align: center;
+//   -ms-flex-pack: center;
+// }
+
+@mixin flex-stretch-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  -webkit-box-align: stretch;
+  -webkit-box-pack: start;
+  -ms-flex-align: stretch;
+  -ms-flex-pack: start;
+}
+
+@mixin before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+
+@mixin relative {
+  position: relative;
+  top: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+@mixin goldBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: $regular;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  color: $black;
+  background-color: $gold;
+  border-radius: 40px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover , &:focus {
+    background-color: $goldHover;
+    transition: background-color .3s ease-in-out;
+  }
+}
+
+@mixin transparentBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 4px 8px;
+  border: 1px solid $gold;
+  font-size: 1.2rem;
+  font-family: $regular;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover , &:focus {
+    background-color: $gold;
+    transition: background-color .3s ease-in-out;
+  }
+}
