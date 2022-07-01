@@ -13,7 +13,9 @@
     <header class="header">
         <div class="container header__top top">
             <a href="/" class="top__logo">
-                <img class="top__img" src="/images/logo.png" alt="Логотип">                
+                <svg class="top__img" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                    <use xlink:href="images/sprite.svg#logo"></use>                                                   
+                </svg>                             
             </a>
 
             <div class="top__block top-content">
@@ -23,8 +25,8 @@
                     </address>
 
                     <div class="contact__phones">
-                        <a href="tel:+79624545010" class="contact__phone">8 (962) 454 50 10</a>
-                        <a href="tel:+79188670983" class="contact__phone">8 (918) 867 09 83</a>
+                        <a href="tel:+79624545010" class="contact__phone">8 (962) <b class="gold-text">454 50 10</b></a>
+                        <a href="tel:+79188670983" class="contact__phone">8 (918) <b class="gold-text">867 09 83</b></a>
                     </div>
                 </div>
 
@@ -154,7 +156,11 @@
     <!-- Попап Оставить заявку -->
     <div class="black-cont">   
         <div class="black-cont__cta cta-box">
-            <button class="cta-box__close" aria-label="Закрыть"></button>
+            <button class="cta-box__close">
+                <svg class="cta-box__img" >
+                    <use xlink:href="images/sprite.svg#close"></use>                                                   
+                </svg> 
+            </button>
 
             <h2 class="cta-box__heading">
                 Оставить&nbsp;заявку
