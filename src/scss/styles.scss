@@ -4,6 +4,34 @@
 @import "fonts.scss";
 
 
+/*Intro*/
+.intro {
+  flex-direction: column;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+  background-color: rgba(0,0,0,.95);
+
+@include flex-center-center();
+
+  &__img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 3vh;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: $regular;
+    line-height: 26px;
+    color: $white;
+  }
+}
+
 /*Header*/
 
 .header {
@@ -644,6 +672,16 @@
     width: calc(100% - 500px);
   }
 
+  .contact__geo {
+    width: 48%;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .contact__phones {
+    width: 39%;
+  }
+
   .hero-block {
     width: 600px;
     padding-top: 6vh;
@@ -663,6 +701,7 @@
 
     &__zakaz {
       min-height: 51px;
+      margin-bottom: 20px;
       padding: 6px 40px;
       font-size: 1.2rem;
     }
@@ -672,14 +711,10 @@
     padding: 45px 0 100px;
   }
 
-  .name-block {
-    top: 67vh;
-
-    &__text {
-      width: 100%;
-      font-size: .8rem;
-      line-height: 1rem;
-    }
+  .name-block__text {
+    width: 100%;
+    font-size: .8rem;
+    line-height: 1rem;
   }
 
   .about {
@@ -860,6 +895,10 @@
       &:nth-child(2) , &:nth-child(3) {
         margin-top: 0;
       }
+
+      &:nth-child(2) {
+        text-align: left;
+      }
     }
 
     &__image {
@@ -872,8 +911,16 @@
     }
   }
 
+  .left-box__item::after {
+    display: none;
+  }
+
   .main {
     flex-flow: row wrap;
+  }
+
+  .intro {
+    display: none;
   }
 }
 
@@ -950,7 +997,7 @@
 }
 
 @media screen and(max-width: 767px) {
-  .top__zakaz , .contact__phone:last-child , .hero-list__line , .hero-list__left , .left-box__item::after , .right-box__circle , .right-box__hline , .right-box__dots {
+  .top__zakaz , .contact__phone:last-child , .hero-list__line , .hero-list__left , .right-box__circle , .right-box__hline , .right-box__dots {
     display: none;
   }
 

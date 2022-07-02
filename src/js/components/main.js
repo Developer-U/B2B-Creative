@@ -4,7 +4,9 @@ console.log('I want to work in your team!');
 import gsap from "gsap";
 
 
-window.addEventListener('DOMContentLoaded', function(){ 
+window.addEventListener('DOMContentLoaded', function(){
+  
+  // Анимация линий и окружностей
   const vertical = document.querySelector('.hero-list__line');
   const horizontal = document.querySelector('.hero-list__left'); 
   const nameBlock = document.querySelector('.name-block');    
@@ -17,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function(){
   const lineThree = document.querySelector('.right-box__hline_line3');
 
   
-  var tl = gsap.timeline({defaults: {opacity:0}}); 
+  var tl = gsap.timeline({defaults: {opacity:0}, delay:5}); 
 
   tl.from(vertical, {duration:2.4, delay: 0.5, ease: "power3.in", height:0})
     .from(horizontal, {duration:3, ease: "power3.in", width:0}, "<-0.1")
@@ -40,6 +42,23 @@ window.addEventListener('DOMContentLoaded', function(){
         tl2.play();
       }
     };
+
+  
+  const introBox = document.querySelector('.intro');
+  const introLogo = document.querySelector('.intro__img');
+  const introtext = document.querySelector('.intro__text');
+
+  var tl3 = gsap.timeline(); 
+
+  // Определим размер доступного размера экрана устройства:
+
+  const availableScreenWidth = window.screen.availWidth;
+
+  if(availableScreenWidth >= '1024') {
+    tl3.to(introLogo, {duration:3.8, scale:(7)})
+    .from(introtext, {duration:5, opacity:0, y:800, ease: "power3.in"}, "<-0.6")
+    .to(introBox, {duration:1.4, delay:1.5, opacity:0, display: 'none', ease: "power1.out"});
+  } 
  
     
     // Создаём плавность анимации появления попапа
